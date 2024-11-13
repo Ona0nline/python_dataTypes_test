@@ -1,3 +1,17 @@
+"""
+Questions:
+MistaKE ON TEST FOR aLICE?
+"""
+
+numbers = [1, 2, 3]
+t = (5, 10, 15, 20)
+value = 15
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+student_grades = {'Alice': 85, 'Bob': 90, 'Charlie': 78}
+
+
 def add_to_list(numbers):
     """
     Task:
@@ -6,7 +20,10 @@ def add_to_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    numbers += [6]
+    print(numbers)
+    return numbers
+
 
 
 def remove_from_list(numbers):
@@ -17,7 +34,10 @@ def remove_from_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    numbers.pop(2)
+    print(numbers)
+    return numbers
+    
 
 
 def insert_at_beginning(numbers):
@@ -28,7 +48,10 @@ def insert_at_beginning(numbers):
     Return:
     - The modified list.
     """
-    pass
+    # INSERT METHOD
+    numbers.insert(0,0)
+    print(numbers)
+    return numbers
 
 
 def reverse_list(numbers):
@@ -39,7 +62,10 @@ def reverse_list(numbers):
     Return:
     - The reversed list.
     """
-    pass
+    # REVERSE
+    numbers.reverse()
+    print(numbers)
+    return numbers
 
 
 def create_new_tuple(t):
@@ -50,7 +76,13 @@ def create_new_tuple(t):
     Return:
     - The new tuple with the first two elements.
     """
-    pass
+    
+    new_tup = t[0], t[1]
+
+    # ONLY TUPLE METHODS = COUNT AND INDEX
+    print(new_tup)
+    return new_tup
+
 
 
 def check_if_value_exists(t, value):
@@ -61,7 +93,11 @@ def check_if_value_exists(t, value):
     Return:
     - True if the value exists, otherwise False.
     """
-    pass
+    for tup in t:
+        if tup == value:
+            return True
+        else:
+            False
 
 
 def find_intersection(set1, set2):
@@ -72,7 +108,12 @@ def find_intersection(set1, set2):
     Return:
     - The intersection of the two sets.
     """
-    pass
+    # COORELATION BETWEEN SET OPERATIONS AND ENGLISH MEANINFG
+    # USE INTERSECTION BUILT IN FUNCTION
+    a = set1 & set2
+    # a = set1.intersection(set2)
+    print(a)
+    return a
 
 
 def find_union(set1, set2):
@@ -83,7 +124,9 @@ def find_union(set1, set2):
     Return:
     - The union of the two sets.
     """
-    pass
+    union = set1 & set2
+    print(union)
+    return union
 
 
 def find_difference(set1, set2):
@@ -94,7 +137,9 @@ def find_difference(set1, set2):
     Return:
     - The difference between the two sets.
     """
-    pass
+    difference = set1 - set2
+    print(difference)
+    return difference
 
 
 def add_student(student_grades):
@@ -105,7 +150,9 @@ def add_student(student_grades):
     Return:
     - The updated dictionary with the new student.
     """
-    pass
+    student_grades['David'] = 92
+    print(student_grades)
+    return student_grades
 
 
 def change_bob_grade(student_grades):
@@ -116,7 +163,9 @@ def change_bob_grade(student_grades):
     Return:
     - The updated dictionary with Bob’s grade changed.
     """
-    pass
+    student_grades['Bob'] = 95
+    print(student_grades)
+    return student_grades
 
 
 def delete_charlie(student_grades):
@@ -127,7 +176,9 @@ def delete_charlie(student_grades):
     Return:
     - The updated dictionary with Charlie removed.
     """
-    pass
+    del(student_grades['Charlie'])
+    print(student_grades)
+    return student_grades
 
 
 def retrieve_alice_grade(student_grades):
@@ -138,4 +189,23 @@ def retrieve_alice_grade(student_grades):
     Return:
     - Alice's grade.
     """
-    pass
+    
+    print(student_grades['Alice'])
+    return student_grades['Alice']
+    
+
+
+    
+# add_to_list(numbers)
+# remove_from_list(numbers)
+# insert_at_beginning(numbers)
+# reverse_list(numbers)
+# create_new_tuple(t)
+# check_if_value_exists(t,value)
+find_intersection(set1,set2)
+# find_union(set1,set2)
+# find_difference(set1, set2)
+# add_student(student_grades)
+# change_bob_grade(student_grades)
+# delete_charlie(student_grades)
+# retrieve_alice_grade(student_grades)

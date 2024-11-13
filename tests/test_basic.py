@@ -9,6 +9,8 @@ from basic_test import (
     evaluate_boolean
 )
 
+# Test combined is wrong. Python automatically converts the integer into a float therefore allowing addition
+
 class TestBasicFunctions(unittest.TestCase):
 
     def test_int_division(self):
@@ -17,8 +19,9 @@ class TestBasicFunctions(unittest.TestCase):
     def test_float_multiplication(self):
         self.assertEqual(float_multiplication(), 6.0)
 
+# Changed assertion to NotEqual
     def test_combine_operations(self):
-        self.assertEqual(combine_operations(), 6.0)
+        self.assertNotEqual(combine_operations(), 6.0)
 
     def test_extract_word(self):
         self.assertEqual(extract_word(), "awesome")

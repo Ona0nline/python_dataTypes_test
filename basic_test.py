@@ -1,3 +1,8 @@
+"""
+Questions:
+MistaKE ON TEST FOR SUM??
+"""
+
 def int_division():
     """
     Task:
@@ -6,7 +11,11 @@ def int_division():
     Return:
     - The result of the division (integer).
     """
-    pass
+    a = 7
+    b = 2
+    int_div = a//b
+    print(int_div)
+    return int_div
 
 
 def float_multiplication():
@@ -17,7 +26,11 @@ def float_multiplication():
     Return:
     - The result of the multiplication (float).
     """
-    pass
+    a = 3.0
+    b = 2
+    prod = a * b
+    print(prod)
+    return prod
 
 
 def combine_operations():
@@ -28,7 +41,9 @@ def combine_operations():
     Return:
     - The combined result (float).
     """
-    pass
+    sum = int_division() + float_multiplication()
+    print(sum)
+    return sum
 
 
 def extract_word():
@@ -39,7 +54,10 @@ def extract_word():
     Return:
     - The extracted word ('awesome').
     """
-    pass
+    string = "Python is awesome"
+    split_word = string.split()
+    print(split_word[2])
+    return(split_word[2])
 
 
 def to_lowercase():
@@ -50,7 +68,11 @@ def to_lowercase():
     Return:
     - The lowercase version of the string.
     """
-    pass
+
+    string = "Python is awesome!"
+    print(string.lower())
+    return string.lower()
+    
 
 
 def count_o():
@@ -61,7 +83,13 @@ def count_o():
     Return:
     - The count of the letter 'o'.
     """
-    pass
+    o_count = 0
+    string = 'Python is awesome!'
+    for char in string:
+        if char == 'o':
+            o_count += 1
+    print(o_count)
+    return o_count
 
 
 def evaluate_boolean():
@@ -72,4 +100,14 @@ def evaluate_boolean():
     Return:
     - The boolean result of the expression.
     """
-    pass
+    expression = not (5>3) and (10 == 5 * 2)
+    print(bool(expression))
+
+if __name__ == "__main__":
+    int_division()
+    float_multiplication()
+    combine_operations()
+    extract_word()
+    to_lowercase()
+    count_o()
+    evaluate_boolean()
